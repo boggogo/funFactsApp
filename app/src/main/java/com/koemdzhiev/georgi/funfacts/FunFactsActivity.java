@@ -31,7 +31,6 @@ public class FunFactsActivity extends ActionBarActivity {
         //Variables
         final TextView factLabel = (TextView) findViewById(R.id.factTextView);
         final Button showFactButton = (Button) findViewById(R.id.showFactButton);
-        final Button shareButton = (Button) findViewById(R.id.shareButton);
 
         final RelativeLayout relativeLayout = (RelativeLayout) findViewById(R.id.myRelativeLayout);
         View.OnClickListener listener = new View.OnClickListener() {
@@ -42,22 +41,12 @@ public class FunFactsActivity extends ActionBarActivity {
 
                 factLabel.setText(fact);
                 showFactButton.setTextColor(color);
-                shareButton.setTextColor(color);
                 relativeLayout.setBackgroundColor(color);
             }
         };
         showFactButton.setOnClickListener(listener);
 
-        shareButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent shareTextIntent = new Intent();
-                shareTextIntent.setAction(Intent.ACTION_SEND);
-                shareTextIntent.putExtra(Intent.EXTRA_TEXT,fact);
-                shareTextIntent.setType("text/plain");
-                startActivity(shareTextIntent);
-            }
-        });
+
         //Creating a Toast
         //Toast.makeText(this,"Activity was created!",Toast.LENGTH_LONG).show();
         //Log.d(TAG,"Logging from the onCreate method");
