@@ -21,6 +21,7 @@ public class FunFactsActivity extends ActionBarActivity {
 
     public static final String TAG = FunFactsActivity.class.getSimpleName();
     private  FactBook mFactBook = new FactBook();
+    private Button shareButtonl;
     private ColorWheel colorWheel = new ColorWheel();
     private String fact;
 

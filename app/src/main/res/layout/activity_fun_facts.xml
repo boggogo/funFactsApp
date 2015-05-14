@@ -34,19 +34,4 @@
         android:background="@android:color/white"
         android:textColor="#ff51b46d" />
 
-    <Button
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Share fact"
-        android:id="@+id/shareButton"
-        android:background="@android:color/white"
-        android:layout_above="@+id/showFactButton"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginBottom="29dp"
-        android:layout_toRightOf="@+id/textView"
-        android:layout_toEndOf="@+id/textView"
-        android:textColor="#ff51b46d"/>
-
 </RelativeLayout>
