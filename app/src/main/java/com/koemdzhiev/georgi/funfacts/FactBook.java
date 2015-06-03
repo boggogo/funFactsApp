@@ -1,7 +1,5 @@
 package com.koemdzhiev.georgi.funfacts;
 
-import android.util.Log;
-
 import java.util.Random;
 
 /**
@@ -163,12 +161,52 @@ public class FactBook {
             "The longest recorded flight of a chicken is 13 seconds.",
             "400 Quarter Pounders can be made from a single cow.",
             "Only 38% of Americans eat breakfast every day.",
-            "111,111,111 x 111,111,111 = 12,345,678,987,654,321",
             "11% of the World is left handed.",
             "A \"Jiffy\" is the scientific name for 1/100th  of a second.",
             "A Boeing 747's wingspan is longer than the Wright brothers first flight.",
             "A broken clock is right two times a day.",
-            "A duck's quack doesn't echo anywhere, no one knows why."
+            "A duck's quack doesn't echo anywhere, no one knows why.",
+            "Turtles can breathe through their butts.",
+            "The Beatles used the word “love” 613 times in their songs.",
+            "Blind people smile even though they’ve never seen anyone else smile.",
+            "The elements that we are composed of were formed in the interiors of collapsing stars. We are all made of star dust.",
+            "When you were born, you were, for a moment, the youngest person on earth.",
+            " Sea otters hold hands when they sleep to keep from drifting apart.",
+            " Squirrels plant thousands of new trees each year simply by forgetting where they put their acorns.",
+            "Macaques in Japan use coins to buy vending machine snacks.",
+            "In China, killing a Panda is punishable by death.",
+            "The voices of Mickey Mouse and Minnie Mouse got married in real life.",
+            "Gentoo penguins propose to their lifemates with a pebble.",
+            "Kissing burns 2 calories a minute. Undressing burns 8.",
+            "Google, the periodic table, the structure of our DNA, and “Yesterday” by the Beatles are all ideas that were conceived in dreams.",
+            "In a 2008 survey, 58% of British teens thought Sherlock Holmes was a real guy, while 20% thought Winston Churchill was not.",
+            "Nutella was invented during WWII, when an Italian pastry maker mixed hazelnuts into chocolate to extend his chocolate ration.",
+            "A British man changed his name to Tim Pppppppppprice to make it harder for telemarketers to pronounce.",
+            "J.P. Morgan once offered $100,000 to anyone who could figure out why his face was so red. No one solved the mystery.",
+            "Prairie dogs say hello with kisses.",
+            "Jonas Salk declined to patent his polio vaccine. \"There is no patent,\" he said. \"Could you patent the sun?\"",
+            "After Leonardo da Vinci's death, King Francis I of France hung the Mona Lisa in his bathroom.",
+            "Human fingers are so sensitive, that if your fingers were the size of Earth, you could feel the difference between a house and a car.",
+            "With the 60,000 miles of blood vessels inside the average human body, you could circumnavigate Earth two and a half times.",
+            "The human eye is so sensitive that if the Earth were flat, you could spot a candle flickering at night from up to 30 miles away.",
+            "Nerve impulses travel to and from the brain at speeds of up to 250 miles per hour, faster than a Formula 1 racecar.",
+            "When you blush, the lining of your stomach blushes too.",
+            "The human brain can read up to 1,000 words per minute.",
+            "Inside your belly button are thousands of bacteria that form an ecosystem the size of an entire rainforest.",
+            "You can see ultraviolet light, the ability is just filtered out by the eye’s lens. Some people have undergone surgery to remove the lense and can detect ultraviolet light.",
+            "Our muscles are actually incredibly more powerful than they appear to be. Human strength is limited to protect our tendons and muscles from harming themselves. This limitation can be removed during an adrenaline rush, during which some people have lifted boulders or even cars off themselves.",
+            "We humans are the best long-distance runners on the planet. Better than any four-legged animal. In fact, thousands of years ago we used to run after our prey until they died of exhaustion.",
+            "A full head of human hair is strong enough to support 12 tonnes.",
+            "In 30 minutes, the human body gives off enough heat to bring a gallon of water to the boil",
+            "The focusing muscles in your eyes move around 100,000 times a day. To give your leg muscles the same workout, you’d need to walk 50 miles.",
+            "For every pound of fat or muscle gained, your body creates seven miles of new blood vessels",
+            "Humans share 50% of their DNA with bananas.",
+            "Humans shed 40 pounds of skin in their lifetime, completely replacing their outer skin every month.",
+            "Around 90% of the cells that make humans aren’t “human” in origin. We’re mostly fungi and bacteria.",
+            "The human brain uses 20% of the entire body’s oxygen and calorie intake, despite only accounting for about 2% of an adult’s body mass.",
+            "We also produce differently structured tears depending on the reason we’re crying. When put under the microscope, crying over grief, hope, or onions all produced a unique tear.",
+            "You’re a little richer than you might think. Inside all of us is around 0.2 milligrams of gold, most of which is in our blood Sadly, you’d need the blood of around 40,000 people to collect enough gold to make one 8g coin.",
+            "Your body produces 25 million new cells each second. Every 13 seconds, you produce more cells than there are people in the United States."
     };
     //Methods
     public String getFact(){
