@@ -1,5 +1,6 @@
 package com.koemdzhiev.georgi.funfacts;
 
+import android.app.AlertDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -46,7 +47,16 @@ public class AddFactActivity extends ActionBarActivity {
         mAddBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                SaveFactInDB();
+                if(mFunFact.getText().toString().isEmpty()){
+                    AlertDialog.Builder builder = new AlertDialog.Builder(AddFactActivity.this);
+                    builder.setTitle("Oops!");
+                    builder.setMessage("Cannot send an empty fact!");
+                    builder.setPositiveButton(android.R.string.ok,null);
+                    AlertDialog dialog = builder.create();
+                    dialog.show();
+                }else {
+                    SaveFactInDB();
+                }
             }
         });
 
