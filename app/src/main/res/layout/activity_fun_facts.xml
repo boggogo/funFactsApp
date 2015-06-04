@@ -3,25 +3,16 @@
     android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:id="@+id/myRelativeLayout"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".FunFactsActivity"
+    android:paddingTop="30dp"
+    android:paddingBottom="30dp" tools:context=".FunFactsActivity"
     android:background="#ff51b46d">
 
     <TextView android:text="Did you know?" android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="24sp"
         android:textColor="#80fffeff"
+              android:paddingBottom="15dp"
               android:id="@+id/textView"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/factTextView"
-        android:textSize="24sp"
-        android:textColor="@android:color/white"
-        android:longClickable="false"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"/>
 
     <Button
         android:layout_width="fill_parent"
@@ -32,5 +23,27 @@
         android:layout_centerHorizontal="true"
         android:background="@android:color/white"
         android:textColor="#ff51b46d" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/textView"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_above="@+id/showFactButton"
+        android:gravity="center_vertical"
+        android:transitionGroup="false">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/factTextView"
+            android:textSize="20sp"
+            android:textColor="@android:color/white"
+            android:longClickable="false"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"/>
+    </LinearLayout>
 
 </RelativeLayout>

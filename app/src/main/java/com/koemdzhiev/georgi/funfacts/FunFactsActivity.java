@@ -58,15 +58,19 @@ public class FunFactsActivity extends ActionBarActivity {
                 if(isNetworkAvailable()){
                     //load all facts, from database and local
                     loadDBFacts();
+                    //Toast.makeText(FunFactsActivity.this,"Size of all facts: " + allFacts.length,Toast.LENGTH_LONG).show();
                     String fact = getFactFromAll();
+                    color = colorWheel.getColor();
                     factLabel.setText(fact);
+                    relativeLayout.setBackgroundColor(color);
+                    showFactButton.setTextColor(color);
                     alertDismised = false;
                 }else {
                     //alert that the network is unavailable and local facts will be used
                     if(alertDismised == false) {
                         AlertDialog.Builder builder = new AlertDialog.Builder(FunFactsActivity.this);
                         builder.setTitle("Oops!");
-                        builder.setMessage("No internet!. Only fun facts stored on the device will be used!");
+                        builder.setMessage("No internet! Only fun facts stored on the device will be used!");
                         builder.setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
@@ -80,7 +84,6 @@ public class FunFactsActivity extends ActionBarActivity {
                     //load local facts
                     fact = mFactBook.getFact();
                     color = colorWheel.getColor();
-
                     factLabel.setText(fact);
                     showFactButton.setTextColor(color);
                     relativeLayout.setBackgroundColor(color);
@@ -101,6 +104,7 @@ public class FunFactsActivity extends ActionBarActivity {
         //Log.d(TAG,"Logging from the onCreate method");
 
     }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -131,13 +135,10 @@ public class FunFactsActivity extends ActionBarActivity {
 
     @Override
     protected void onResume() {
-        super.onPostResume();
+        super.onResume();
+            loadDBFacts();
+        localFacts = mFactBook.getFacts();
         factLabel.setText(mFactBook.getFact());
-        color = colorWheel.getColor();
-        relativeLayout.setBackgroundColor(color);
-        showFactButton.setTextColor(color);
-        //-----
-
     }
     //load all facts into allFacts variable (local + database)
     private void loadDBFacts() {
@@ -163,7 +164,7 @@ public class FunFactsActivity extends ActionBarActivity {
                 } else {
                     AlertDialog.Builder builder = new AlertDialog.Builder(FunFactsActivity.this);
                     builder.setTitle("Oops!");
-                    builder.setMessage("Cannot send get fun facts from the database. Please try again later!");
+                    builder.setMessage("Cannot get fun facts from the database. Please try again later!");
                     builder.setPositiveButton(android.R.string.ok, null);
                     AlertDialog dialog = builder.create();
                     dialog.show();
@@ -189,6 +190,7 @@ public class FunFactsActivity extends ActionBarActivity {
         String fact = "";
         Random randomGenerator = new Random();
         int randomNumber = randomGenerator.nextInt(allFacts.length);
+        Log.i("Getting fact index: ",randomNumber+"");
         fact = allFacts[randomNumber];
         return fact;
     }

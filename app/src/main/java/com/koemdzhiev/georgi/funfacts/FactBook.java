@@ -1,5 +1,7 @@
 package com.koemdzhiev.georgi.funfacts;
 
+import android.util.Log;
+
 import java.util.Random;
 
 /**
@@ -7,6 +9,7 @@ import java.util.Random;
  */
 public class FactBook {
 
+    private static final String TAG = FactBook.class.getSimpleName();
     //member variables
     public String[] mFacts = {
             "Ants stretch when they wake up in the morning.",
@@ -213,6 +216,7 @@ public class FactBook {
         String fact = "";
         Random randomGenerator = new Random();
         int randomNumber = randomGenerator.nextInt(mFacts.length);
+        Log.i(TAG,randomNumber+"");
         fact = mFacts[randomNumber];
         return fact;
     }
