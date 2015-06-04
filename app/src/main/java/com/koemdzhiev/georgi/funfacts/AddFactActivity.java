@@ -4,6 +4,7 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
 import android.view.Menu;
@@ -36,6 +37,8 @@ public class AddFactActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_fact);
+        ActionBar ab = getSupportActionBar();
+        ab.setTitle("Add a fun fact");
 
         mFunFact = (EditText)findViewById(R.id.addFunFactEditText);
         mAddBtn = (Button)findViewById(R.id.addFunFactBtn);

@@ -216,4 +216,12 @@ public class FactBook {
         fact = mFacts[randomNumber];
         return fact;
     }
+
+        public String[] getFacts() {
+                return mFacts;
+        }
+
+        public void setFacts(String[] facts) {
+                mFacts = facts;
+        }
 }
